@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- iconscout cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link rel="stylesheet" href="./tint.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="heading">
+        <h1>Tint & Shade Generator</h1>
+      </div>
+      <form class="form_wrapper">
+        <div class="color_wrap">
+              <label for="colorInput" class="color_inp_lable"
+            >Choose a Color:</label
+          >
+          <input
+            type="color"
+            id="colorInput"
+            name="colorInput"
+            value="#ffffff"
+            oninput="updateHexValue()"
+          />
+        </div>
+        <label for="hexInput" class="hexlabel">Hex Value</label>
+        <input type="text" id="hexInput" name="hexInput" />
+        <button type="button" onclick="generateBoxes()">
+          Make tints and shade
+        </button>
+      </form>
+      <div id="boxContainer"></div>
+    </div>
+    <div class="message" id="message"></div>
+    <script src="./tint.js"></script>
+  </body>
+</html>
